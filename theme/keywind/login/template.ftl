@@ -63,6 +63,9 @@
     <#if displayInfo>
       <#nested "info">
     </#if>
+    <#if realm.internationalizationEnabled && locale.supported?size gt 1>
+      <@localeProvider.kw currentLocale=locale.current locales=locale.supported />
+    </#if>
   </#assign>
 
   <html<#if realm.internationalizationEnabled> lang="${locale.currentLanguageTag}"</#if>>
@@ -74,9 +77,6 @@
         <@card.kw content=cardContent footer=cardFooter header=cardHeader />
         <@nav.kw>
           <#nested "nav">
-          <#if realm.internationalizationEnabled && locale.supported?size gt 1>
-            <@localeProvider.kw currentLocale=locale.current locales=locale.supported />
-          </#if>
         </@nav.kw>
       </@container.kw>
     </@body.kw>
