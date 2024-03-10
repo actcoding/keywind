@@ -31,3 +31,8 @@
     @apply mr-2;
   }
 }
+
+body {
+  background: rgb(253,239,249);
+  background: linear-gradient(0deg, rgba(253,239,249,1) 0%, rgba(236,56,188,1) 33%, rgba(115,3,192,1) 66%, rgba(3,0,30,1) 100%);
+}

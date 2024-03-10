@@ -2,8 +2,14 @@
   <title>${msg("loginTitle", (realm.displayName!""))}</title>
 
   <meta charset="utf-8">
+
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/svg+xml" href="https://act-coding.de/logo.svg" />
 
   <#if properties.meta?has_content>
     <#list properties.meta?split(" ") as meta>
